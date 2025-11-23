@@ -39,6 +39,8 @@ const handleSelect = (key) => {
                     >
                         <el-menu-item index="/Home">首页</el-menu-item>
                         <el-menu-item index="/CodeDepository">一点点想法</el-menu-item>
+                        <el-menu-item index="/Contact">联系我</el-menu-item>
+                
                     </el-menu>
                 </el-header>
             </el-affix>
@@ -46,6 +48,7 @@ const handleSelect = (key) => {
             <!-- 主体内容 -->
             <el-main>
                 <RouterView />
+                <p>测试</p>
             </el-main>
 
             <!-- 底部信息栏 -->
