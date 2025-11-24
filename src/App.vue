@@ -4,6 +4,9 @@ import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 // 导入组件
+import Home from './components/Home.vue'
+import IdeaPage from './components/views/IdeaPage.vue'
+
 
 
 // 获取路由对象
@@ -38,8 +41,10 @@ const handleSelect = (key) => {
                     router="true"
                     >
                         <el-menu-item index="/Home">首页</el-menu-item>
-                        <el-menu-item index="/CodeDepository">一点点想法</el-menu-item>
-                        <el-menu-item index="/Contact">联系我</el-menu-item>
+                        <el-menu-item index="/idea">灵感池</el-menu-item>
+                        <el-menu-item index="/achieve">实现</el-menu-item>
+                        <el-menu-item index="/answer">Q & A</el-menu-item>
+                        <el-menu-item index="/word">文档</el-menu-item>
                 
                     </el-menu>
                 </el-header>
@@ -48,7 +53,7 @@ const handleSelect = (key) => {
             <!-- 主体内容 -->
             <el-main>
                 <RouterView />
-                <p>测试</p>
+
             </el-main>
 
             <!-- 底部信息栏 -->
@@ -57,6 +62,7 @@ const handleSelect = (key) => {
              </el-footer>
         </el-container>
     </div>
+    <TodoList />
 </template>
 
 <style scoped>

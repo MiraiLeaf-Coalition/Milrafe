@@ -5,6 +5,10 @@ import CodeDepository from './components/CodeDepository(css).vue'
 
 // 导入子组件
 import Button from './components/views/button.vue'
+import IdeaPage from './components/views/IdeaPage.vue'
+import Word from './components/views/Word.vue'
+import WordEdit from './components/views/WordEdit.vue'
+
 
 
 const routes = [
@@ -14,9 +18,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/CodeDepository',
-    name: '一点点想法',
-    component: CodeDepository,
+    path: '/idea',
+    name: '灵感池',
+    component: IdeaPage,
     children: [
       {
         path: 'button',
@@ -24,7 +28,20 @@ const routes = [
         component: Button
       },
     ]
-  }
+  },
+  {
+    path:'/word',
+    name:'文档',
+    component:Word,
+    children:[
+      {
+        path:'/wordEdit',
+        name:'文档编辑',
+        component:WordEdit
+      }
+    ]
+  },
+
 ]
 
 // 创建路由实例
