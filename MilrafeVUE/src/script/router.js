@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // 导入父组件
-import Home from './components/Home.vue'
-import CodeDepository from './components/CodeDepository(css).vue'
-import Like from './components/like.vue'
+import Home from '../views/Home.vue'
+import CodeDepository from '../views/CodeDepository(css).vue'
+import Like from '../views/like.vue'
 
 // 导入子组件
-import Button from './components/views/button.vue'
+import Button from '../views/button.vue'
 
 
 const routes = [
